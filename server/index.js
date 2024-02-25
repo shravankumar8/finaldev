@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
-app.get("/",(req,res)=>{res.send("hii maro lokham ki welcome cheppu bro")})
+app.get("/",(req,res)=>{res.send("hii maro lokham  bro")})
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
 
