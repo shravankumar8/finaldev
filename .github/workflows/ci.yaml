@@ -5,7 +5,7 @@ name: Deploy
 # or onchange listner
   push:
     branches:
-      - master # or the branch you want to deploy from
+      - main # or the branch you want to deploy from
 #this is an on change event listener on push to branches to master branch do the jobs listed
 
 
