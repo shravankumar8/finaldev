@@ -1,0 +1,1 @@
+import k from "../../part-2-scripts/deploy.sh"
