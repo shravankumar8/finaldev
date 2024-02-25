@@ -1,1 +1,1 @@
-ssh -t -i "cert-file.cer" ubuntu@ec2-url  "sudo bash ~/deploy.sh"
+ssh -t -i "testingServerKey.pem" ubuntu@ec2-3-25-161-211.ap-southeast-2.compute.amazonaws.com "sudo bash ~/deploy.sh"
