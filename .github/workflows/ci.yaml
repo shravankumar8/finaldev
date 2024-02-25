@@ -1,37 +1,22 @@
-name: Deploy 
-# just a fucing name initiation
+name: Deploy
 
-#condition of what should ther process attack target on it is comething like a lsten event 
-# or onchange listner
+on:
   push:
     branches:
       - main # or the branch you want to deploy from
-#this is an on change event listener on push to branches to master branch do the jobs listed
 
-
-
-#jobs are like methods or funtions that you want to run as a result of the event listened
-# here it only does deploy job 
-# runs on tell on where these actions need to run 
-
-# steps tells to procedure to the ubuntu machine
-
-# steps/uses 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: SSH and deploy
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      run: |
-        echo "$SSH_PRIVATE_KEY" > keyfile
-        chmod 600 keyfile
-        ssh -t -i keyfile ubuntu@ec2-url "sudo bash ~/deploy.sh"
-
-
-
+      - name: SSH and deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          echo "$SSH_PRIVATE_KEY" > keyfile
+          chmod 600 keyfile
+          ssh -i keyfile ubuntu@ec2-3-25-254-202.ap-southeast-2.compute.amazonaws.com "sudo bash ~/deploy.sh"
