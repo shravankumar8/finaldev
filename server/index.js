@@ -12,11 +12,9 @@ app.use(express.json());
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
 app.get("/", (req, res) => {
-  res.send(
-    "am very sorry this is all wrong story made up not funny at all"
-  );
+  res.send("am very sorry this is all wrong story made up not funny at all");
 });
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+app.listen(80, () => console.log("Server running on port 3000"));
