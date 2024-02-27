@@ -13,7 +13,7 @@ app.use("/admin", adminRouter);
 app.use("/user", userRouter);
 app.get("/", (req, res) => {
   res.send(
-    "In a quaint village, there lived a kind-hearted blacksmith named Aiden. One day, a mysterious traveler gifted him a small, silver key. Intrigued, Aiden discovered that the key unlked a hidden door in his workshop. Behind it lay a room filled with forgotten dreams, waiting to be forged into reality. Inspired, Aiden spent his days bringing those dreams to life, turning his humble village into a haven of magic and possibility."
+    "am very sorry this is all wrong story made up not funny at all"
   );
 });
 // Connect to MongoDB
